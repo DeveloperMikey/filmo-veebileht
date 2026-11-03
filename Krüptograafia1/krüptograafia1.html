@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CTF - Krüptograafia I</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Krüptograafia I</h1>
+    <p>Krüptograafia on oma olemuselt teadusharu, mis muudab informatsiooni loetamatuks ja kaitstuks, et kõrvalised isikud ei pääseks ligi informatsioonile. Üks kõige lihtsamaid krüpteerimismeetodeid on Caesari nihe. Caesari nihke korral asendatakse iga täht sõnumis kindel arv kohti vasakule või paremale leitava tähega tähestikus.</p>
+    <br>
+    <p>Proovi murda see krüpteeritud sõnum:</p>
+</div>
+
+<div class="krüpteeritud_lipp">
+    byff{squiuhy_iqbqj_ed_xuq}
+</div>
+
+<p>Sisesta leitud lipp formaadis <code>lipp{...}</code>:</p>
+<div class="vihjeNupud">
+<input type="button" value="Vihje 1" onclick="alert('Vihje 1: Kasuks tuleb ilmselt mõne Caesari nihke rakenduse kasutamine netis');"> <input type="button" value="Vihje 2" onclick="alert('Vihje 2: Tähestik liigub 16 kohta');"> <input type="button" value="Vihje 3" onclick="alert('Vihje 3: Liiguta tähestiku 16 kohta paremale');">
+</div> 
+<br><br>
+<!-- JavaScript saadud stackoverflowist kellegi varasema küsimuse põhjal. https://stackoverflow.com/questions/24495661/javascript-how-to-check-if-the-input-is-correct -->
+
+<input type="text" id="test" placeholder="lipp{...}">
+<br><br>
+<input type="button" value="Kontrolli" onclick="lipuKontrollija()">
+<br>
+<span id="vastus"></span>
+
+<script>
+function lipuKontrollija()
+{
+var a=document.getElementById("test");
+if(a.value == "lipp{caeseri_salat_on_hea}")
+{
+document.getElementById('vastus').innerHTML= 'Tubli töö! <a href="../Krüptograafia2/krüptograafia2.html">Järgmine lipp on juba raskemalt krüpteeritud.</a>';
+}
+else
+{
+document.getElementById('vastus').innerHTML= 'Vale vastus. Proovi uuesti.';
+
+}
+
+}
+</script>
+
+
+</body>
