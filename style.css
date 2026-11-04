@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Rubik Doodle Shadow";
+  src: url(https://fonts.gstatic.com/s/rubikdoodleshadow/v1/rP2bp3im_k8G_wTVdvvMdHqmXTR3lEaL-KyT3Q.woff2);
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(https://fonts.gstatic.com/s/rubik/v31/iJWKBXyIfDnIV7nBrXw.woff2);
+}
+
+.AvaPealkiri {
+    text-align: center;
+    font-size:25px;
+    font-family: "Rubik Doodle Shadow";
+    padding-top: 5rem;
+    color: rgb(229, 229, 229);
+}
+
+h4 {
+    color: rgb(170, 186, 201);
+}
+
+body {
+    font-family: "Rubik";
+    background-color: rgb(32, 32, 32);
+    background-image: url("https://cdn.pixabay.com/photo/2020/02/19/22/57/blue-background-4863452_1280.jpg");
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+.containerMain {
+    padding: 20px;
+    background-image: 
+        linear-gradient(to right,rgba(6, 11, 41, 0.7),rgba(80, 93, 159, 0.1),rgba(6, 11, 41, 0.7)),
+        /*radial-gradient(ellipse,rgba(35, 43, 80, 0.6) 0%, rgba(28, 8, 46, 0.7) 100%),*/
+        url("https://cdn.pixabay.com/photo/2026/02/21/05/24/05-24-35-983_1280.png");
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50vh; /*vh on "viewport height" %.*/
+    border-radius: 20px;
+}
+
+.container {
+    background-image: linear-gradient(to right,rgba(33, 45, 114, 0.3),rgba(144, 152, 194, 0.1),rgba(33, 45, 114, 0.3));
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-left: 25px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+table {
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding-right: 250px;
+    padding-left: 250px
+}
+
+p.h4 {
+    color: rgb(170, 186, 201);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+}
