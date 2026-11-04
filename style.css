@@ -61,37 +61,10 @@ table {
     padding-left: 250px
 }
 
-
-
-
-/*
-
-    <table>
-        <tr>
-            <th>veerg1</th>
-            <th>veerg2</th>
-        </tr>
-        <tr>
-            <td>rida1</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <td>rida2</td>
-            <td>...</td>
-        </tr>
-    </table>
-
-    <table>
-        <tr>
-            <th>veerg1</th>
-            <th>veerg2</th>
-        </tr>
-        <tr>
-            <td>rida1</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <td>rida2</td>
-            <td>...</td>
-        </tr>
-    </table>
+p.h4 {
+    color: rgb(170, 186, 201);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+}
