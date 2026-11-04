@@ -1,0 +1,67 @@
+body {
+    background-color:#0f151d;
+    color: aliceblue;
+    font-family: "tahoma", sans-serif;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.container h1 {
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.container {
+    background-color: #18212e;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #222930;
+    text-align: left;
+    max-width: 700px;
+
+}
+
+.krüpteeritud_lipp {
+    background-color: #0f151d;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-family: monospace;
+}
+
+.vihjeNupud {
+    display: flex;
+    gap: 10px;
+}
+
+.vihjeNupud input[type="button"] {
+    background-color: #5abad5;
+    border-color: #306574;
+    border-radius: 2px;
+    color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    background-color: #0f151d;
+    border: 1px solid #222930;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.nupp input[type="button"] {
+    background-color: #0c7633;
+    color: aliceblue;
+    border: none;
+    border-radius: 2px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
