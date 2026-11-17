@@ -17,7 +17,8 @@ else:
     params = parse_qs(query_string)
     
     # CTF ülesande põhimõte on see, et client saab serverile õelda vale hinna
-    hind = int(params.get("hind", [0])[0])
+    print(params.get("hind", [1000])[0])
+    hind = int(params.get("hind", [1000])[0])
 
     if hind <= 10:
         ANDMED = Path(__file__).resolve().parent.parent.parent / "andmed"
