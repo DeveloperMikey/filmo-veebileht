@@ -17,7 +17,6 @@ else:
     params = parse_qs(query_string)
     
     # CTF ülesande põhimõte on see, et client saab serverile õelda vale hinna
-    print(params.get("hind", [1000])[0])
     hind = int(params.get("hind", [1000])[0])
 
     print("Content-Type: text/plain; charset=utf-8")
