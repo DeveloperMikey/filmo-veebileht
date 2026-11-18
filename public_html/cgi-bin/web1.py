@@ -17,15 +17,13 @@ else:
     params = parse_qs(query_string)
     
     # CTF ülesande põhimõte on see, et client saab serverile õelda vale hinna
-    hind = int(params.get("hind", [0])[0])
+    hind = int(params.get("hind", [1000])[0])
 
+    print("Content-Type: text/plain; charset=utf-8")
+    print()
     if hind <= 10:
         ANDMED = Path(__file__).resolve().parent.parent.parent / "andmed"
-        vastus = (ANDMED / "web1-vastus.txt").read_text(encoding="utf-8")
-        print("Content-Type: text/plain; charset=utf-8")
-        print()
+        vastus = (ANDMED / "vastused/web1.txt").read_text(encoding="utf-8")
         print(vastus)
     else:
-        print("Content-Type: text/plain; charset=utf-8")
-        print()
         print("Pole piisavalt punkte!")

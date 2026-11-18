@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF - Krüptograafia II</title>
+    <link rel="stylesheet" type="text/css" href="../krüptograafia-1/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Krüptograafia II</h1>
+    <p>Kuuekohaline PIN-kood on räsitud SHA-256 funktsiooniga. Võimalusi on vaid miljon seega Pythonil ei tohiks koodi jõuga murdmisega raskusi tulla.</p>
+    <br>
+    <p>Proovi leida PIN-kood:</p>
+
+
+    <div class="krüpteeritud_lipp2">
+        0e5e097b91d05f70fb89ef03c817d702c62541d428f2daf44e046e06b84e540b
+    </div>
+
+    <p>Sisesta leitud PIN-kood formaadis <code>lipp{...}</code>:</p>
+
+    <div class="vihjeNupud">
+        <input type="button" value="Vihje 1" onclick="alert('Vihje 1: ');"> 
+        <input type="button" value="Vihje 2" onclick="alert('Vihje 2: ');"> 
+            <input type="button" value="Vihje 3" onclick="alert('Vihje 3: ');">
+    </div> 
+    <br>
+
+    <input type="text" id="kasutajaVastus" placeholder="lipp{...}">
+    <br><br>
+
+    <div class="nupp">
+        <input type="button" value="Kontrolli" onclick="lipuKontrollija()">
+    </div>
+
+    <br>
+    <span id="vastus"></span>
+
+</div>
+
+<!-- Javacript sama, mis krüptograafia1 lehel -->
+
+<script>
+async function lipuKontrollija() {
+    const input = document.getElementById('kasutajaVastus').value;
+    if(input.trim().length === 0) {
+        document.getElementById('vastus').innerHTML = 'Proovi ikka midagi sisestada ka.';
+        return;
+    }
+    const encodedBuffer = new TextEncoder().encode(input);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', encodedBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    const targetHash = "a981376eda915aa0bf6326022385afdfa49030d631b3bae149b553fb4776b4ed";
+    if(hashHex === targetHash)
+    {
+    document.getElementById('vastus').innerHTML= 'Tubli töö! rohkem krüptot pole :)';
+    }
+    else
+    {
+    document.getElementById('vastus').innerHTML= 'Vale vastus. Proovi uuesti.';
+
+    }
+
+}
+</script>
+
+</body>
+</html>
