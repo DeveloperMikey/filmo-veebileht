@@ -16,3 +16,40 @@ for (i = 0; i < coll.length; i++) {
 /* Algkood:
 https://www.w3schools.com/howto/howto_js_collapsible.asp
 */
+
+
+var web1 = document.getElementById("web1");
+var web1_state = document.getElementById("web1_state")
+var web1_place = document.getElementById("web1_place")
+
+async function main () {
+
+var web1_id = localStorage.getItem("web1-id")
+if (web1_id) {
+  const params = new URLSearchParams({
+    id: web1_id
+  })
+  const r = await fetch("cgi-bin/edetabeli-koht.py?" + params)
+  //console.log((await r.json()).koht)
+  web1_place.textContent = (await r.json()).koht
+}
+}
+
+main()
+
+if (localStorage.getItem("web1")) {
+  web1_state.textContent = "Seisund: pooleli"
+}
+
+
+web1.addEventListener("click", function() {
+  if (localStorage.getItem("web1") === null) {
+    localStorage.setItem("web1", Date.now())
+  }
+  location.href = "web-exploitation-1"
+
+
+});
+
+
+
