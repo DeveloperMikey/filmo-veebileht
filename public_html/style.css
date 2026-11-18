@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "Rubik Doodle Shadow";
+  src: url(https://fonts.gstatic.com/s/rubikdoodleshadow/v1/rP2bp3im_k8G_wTVdvvMdHqmXTR3lEaL-KyT3Q.woff2);
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(https://fonts.gstatic.com/s/rubik/v31/iJWKBXyIfDnIV7nBrXw.woff2);
+}
+
+.AvaPealkiri {
+    text-align: center;
+    font-size:35px;
+    font-family: "Rubik Doodle Shadow";
+    padding-top: 5rem;
+    color: rgb(229, 229, 229);
+}
+
+h4 {
+    color: rgb(176, 186, 195);
+}
+
+body {
+    font-family: "Rubik";
+    background-color: rgb(138, 138, 138);
+    /*
+    background-image: url("https://cdn.pixabay.com/photo/2020/02/19/22/57/blue-background-4863452_1280.jpg");
+    */ /*
+    background-image: url("https://images.pexels.com/photos/7135037/pexels-photo-7135037.jpeg");
+    *//*
+    background-image: url("https://images.pexels.com/photos/4252672/pexels-photo-4252672.jpeg");
+    */
+    background-image: 
+        url("https://images.pexels.com/photos/6138036/pexels-photo-6138036.jpeg"),
+        url("https://images.pexels.com/photos/7135037/pexels-photo-7135037.jpeg");
+
+    background-blend-mode: overlay;
+    background-size: max(100%,2000px) auto;
+}
+
+.containerMain {
+    padding: 20px;
+    background-image: 
+        linear-gradient(to right,rgba(6, 11, 41, 0.5),rgba(80, 93, 159, 0.1),rgba(6, 11, 41, 0.5)),
+        /*radial-gradient(ellipse,rgba(35, 43, 80, 0.6) 0%, rgba(28, 8, 46, 1) 100%),*/
+        url("https://images.pexels.com/photos/6138036/pexels-photo-6138036.jpeg"),
+        url("https://images.pexels.com/photos/19248457/pexels-photo-19248457.jpeg"),
+        /*url("https://images.pexels.com/photos/29708309/pexels-photo-29708309.jpeg"),*/
+        linear-gradient(to right,rgba(252, 252, 252, 0.2),rgba(252, 252, 252, 0.2)),
+        url("https://cdn.pixabay.com/photo/2026/02/21/05/24/05-24-35-983_1280.png");
+    /*background-color: rgba(154, 154, 154, 1);*/
+    background-blend-mode: overlay;
+    background-size:1750px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto; /*vh on "viewport height" %.*/
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(240, 248, 255, 0.097);
+    border-radius: 20px;
+}
+
+/* Asendatud avatava versiooniga
+.container {
+    background-image: linear-gradient(to right,rgba(33, 45, 114, 0.3),rgba(144, 152, 194, 0.1),rgba(33, 45, 114, 0.3));
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-left: 25px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+*/
+
+table {
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding-right: 250px;
+    padding-left: 250px
+}
+
+p {
+    color:white;
+}
+p.h4 {
+    color: rgb(176, 186, 195);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+}
+
+.collapsible.h4{
+    color: rgb(176, 186, 195);
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Rubik";
+}
+
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(to right,rgba(33, 45, 114, 0.3),rgba(144, 152, 194, 0.1),rgba(33, 45, 114, 0.3));
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-left: 25px;
+    padding-top: 1.33em;
+    padding-bottom: 1.33em;
+}
+
+.active, .collapsible:hover {
+    background-image: linear-gradient(to right,rgba(63, 75, 144, 0.3),rgba(174, 182, 224, 0.1),rgba(63, 75, 144, 0.3));
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.content {
+    display: grid;
+    grid-template: auto auto auto / 75% auto;
+    padding: 0 18px;
+    /*
+    background-color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(to right,rgba(33, 45, 114, 0.3),rgba(144, 152, 194, 0.1),rgba(33, 45, 114, 0.3));
+    */
+    background-color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(to right,rgba(68, 65, 77, 0.3),rgba(49, 23, 49, 0.1),rgba(68, 65, 77, 0.3));
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.G1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+.G2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+.G3 {
+    grid-column: 1;
+    grid-row: 3;
+}
+.G4 {
+    grid-column: 2;
+    grid-row: 3;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 16px;
+    padding-right: 25px;
+    text-align: right;
+
+    font-family: "Rubik Doodle Shadow";
+}
+
+.sisuinfo {
+    width: 65%;
+    height: auto;
+    text-align: left;
+    font-weight: bold;
+    background-image: linear-gradient(to right,rgba(28, 19, 47, 0.2),rgba(47, 36, 70, 0.1),rgba(28, 19, 47, 0.2));
+    border: solid;
+    border-width: 3px;
+    border-color: rgba(40, 33, 114, 0.4);
+    border-radius: 3px;
+    padding-left: 25px;
+    padding-top: 0.33em;
+    padding-bottom: 0.33em;
+    margin-top: 8px;
+    margin-bottom: auto;
+}
+
+.StartNupp {
+    cursor: pointer;
+    width: 70%;
+    height: auto;
+    transition: 0.15s;
+
+    text-align: left;
+    font-style: italic;
+    font-family:"Rubik";
+    font-weight: 600;
+    color: rgb(221, 221, 221);
+    
+    background-color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(to right,rgba(51, 33, 114, 0.2),rgba(100, 56, 105, 0.1),rgba(51, 33, 114, 0.2));
+    border: solid;
+    border-width: 3px;
+    border-color: rgba(86, 33, 114, 0.2);
+    border-radius: 5px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+
+/*
+.StartNupp span {
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: 0.8s;
+}
+*/
+
+.StartNupp:hover {
+    background-image: linear-gradient(to right,rgba(116, 63, 144, 0.2),rgba(130, 86, 135, 0.1),rgba(116, 63, 144, 0.2));
+    color:white
+    
+}
+
+/*
+.StartNupp:hover span {
+    background: -webkit-linear-gradient(#fbfbfb, #c7c3d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+*/
