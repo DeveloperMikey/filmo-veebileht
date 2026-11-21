@@ -22,6 +22,10 @@ var web1 = document.getElementById("web1");
 var web1_state = document.getElementById("web1_state")
 var web1_place = document.getElementById("web1_place")
 
+var web2 = document.getElementById("web2")
+var web2_state = document.getElementById("web2_state")
+var web2_place = document.getElementById("web2_place")
+
 async function main () {
 
 var web1_id = localStorage.getItem("web1-id")
@@ -38,7 +42,7 @@ if (web1_id) {
 main()
 
 if (localStorage.getItem("web1")) {
-  web1_state.textContent = "Seisund: pooleli"
+  web1_state.textContent = "pooleli"
 }
 
 
