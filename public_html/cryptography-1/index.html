@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CTF - Krüptograafia I</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="../lipu-kontroll.js" defer></script>
 </head>
 <body>
 
@@ -30,38 +31,10 @@
     <br><br>
 
     <div class="nupp">
-        <input type="button" value="Kontrolli" onclick="lipuKontrollija()">
+        <input type="button" value="Kontrolli" id="kontroll-nupp">
     </div>
 
     <br>
     <span id="vastus"></span>
 </div>
-<!-- JavaScript pandud kokku stackoverflowist kellegi varasema küsimuse ja SSOJet lehel leiduva õpetuse hashimise kohta põhjal. https://stackoverflow.com/questions/24495661/javascript-how-to-check-if-the-input-is-correct ja ssojet.com/dev-guides/sha-256-in-javascript-in-browser -->
-
-<script>
-async function lipuKontrollija() {
-    const input = document.getElementById('kasutajaVastus').value;
-    if(input.trim().length === 0) {
-        document.getElementById('vastus').innerHTML = 'Proovi ikka midagi sisestada ka.';
-        return;
-    }
-    const encodedBuffer = new TextEncoder().encode(input);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', encodedBuffer);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    const targetHash = "66fed21cafce93ced1e29b64a1664f73e1c95f2df2823f7b2a984b6a52394673";
-    if(hashHex === targetHash)
-    {
-    document.getElementById('vastus').innerHTML= 'Tubli töö! <a href="../Krüptograafia2/krüptograafia2.html">Järgmine lipp on juba raskemalt krüpteeritud.</a>';
-    }
-    else
-    {
-    document.getElementById('vastus').innerHTML= 'Vale vastus. Proovi uuesti.';
-
-    }
-
-}
-</script>
-
-
 </body>

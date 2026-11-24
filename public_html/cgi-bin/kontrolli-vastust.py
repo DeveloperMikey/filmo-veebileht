@@ -8,7 +8,7 @@ import sqlite3
 
 method = os.environ.get("REQUEST_METHOD", "")
 
-ylesanded = ["web1"]
+ylesanded = ["cryptography-1", "cryptography-2", "web-exploitation-1", "web-exploitation-2", "steganography"]
 
 if method != "GET":
     print("Status: 405 Method Not Allowed")
