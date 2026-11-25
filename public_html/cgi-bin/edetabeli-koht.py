@@ -38,10 +38,14 @@ else:
         print(json.dumps({"ok": False}))
     else:
         ylesanne, aeg = rida
-        kiiremaid = db.execute(
-            "SELECT COUNT(*) FROM tulemused WHERE ylesanne = ? AND aeg < ?",
-            (ylesanne, aeg),
-        ).fetchone()[0]
-        print(json.dumps({"ok": True, "koht": kiiremaid + 1}))
+        row = db.execute(
+                """SELECT
+                    SUM(CASE WHEN aeg < ? THEN 1 ELSE 0 END) AS kiiremaid,
+                    COUNT(*) AS kokku
+                FROM tulemused WHERE ylesanne = ?""",
+            (aeg, ylesanne),
+        ).fetchone()
+        kiiremaid, kokku = row[0] or 0, row[1]
+        print(json.dumps({"ok": True, "koht": kiiremaid + 1, "kokku": kokku}))
 
     db.close()

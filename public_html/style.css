@@ -178,6 +178,10 @@ p.h4 {
     margin-bottom: auto;
 }
 
+.sisuinfo span {
+    font-weight:400;
+}
+
 .StartNupp {
     cursor: pointer;
     width: 70%;

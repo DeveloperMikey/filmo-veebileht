@@ -23,7 +23,7 @@ else:
     print()
     if hind <= 10:
         ANDMED = Path(__file__).resolve().parent.parent.parent / "andmed"
-        vastus = (ANDMED / "vastused/web1.txt").read_text(encoding="utf-8")
+        vastus = (ANDMED / "vastused/web-exploitation-1.txt").read_text(encoding="utf-8")
         print(vastus)
     else:
         print("Pole piisavalt punkte!")
