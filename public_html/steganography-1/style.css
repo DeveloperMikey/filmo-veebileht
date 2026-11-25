@@ -80,10 +80,10 @@ p.h4 {
 }
 
 .containerMain audio {
-    padding-top: 2em;
+    padding-top: 1.5em;
 }
 
 .sektsioon {
-    display:grid;
-    grid-template: auto / auto auto;
+    display:flex;
+    column-gap: 5px;
 }

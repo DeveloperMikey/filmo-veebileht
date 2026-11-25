@@ -23,13 +23,6 @@ h4 {
 body {
     font-family: "Rubik";
     background-color: rgb(138, 138, 138);
-    /*
-    background-image: url("https://cdn.pixabay.com/photo/2020/02/19/22/57/blue-background-4863452_1280.jpg");
-    */ /*
-    background-image: url("https://images.pexels.com/photos/7135037/pexels-photo-7135037.jpeg");
-    *//*
-    background-image: url("https://images.pexels.com/photos/4252672/pexels-photo-4252672.jpeg");
-    */
     background-image: 
         url("https://images.pexels.com/photos/6138036/pexels-photo-6138036.jpeg"),
         url("https://images.pexels.com/photos/7135037/pexels-photo-7135037.jpeg");
@@ -42,13 +35,10 @@ body {
     padding: 20px;
     background-image: 
         linear-gradient(to right,rgba(6, 11, 41, 0.5),rgba(80, 93, 159, 0.1),rgba(6, 11, 41, 0.5)),
-        /*radial-gradient(ellipse,rgba(35, 43, 80, 0.6) 0%, rgba(28, 8, 46, 1) 100%),*/
         url("https://images.pexels.com/photos/6138036/pexels-photo-6138036.jpeg"),
         url("https://images.pexels.com/photos/19248457/pexels-photo-19248457.jpeg"),
-        /*url("https://images.pexels.com/photos/29708309/pexels-photo-29708309.jpeg"),*/
         linear-gradient(to right,rgba(252, 252, 252, 0.2),rgba(252, 252, 252, 0.2)),
         url("https://cdn.pixabay.com/photo/2026/02/21/05/24/05-24-35-983_1280.png");
-    /*background-color: rgba(154, 154, 154, 1);*/
     background-blend-mode: overlay;
     background-size:1750px;
     margin-left: auto;
@@ -60,17 +50,6 @@ body {
     border-color: rgba(240, 248, 255, 0.097);
     border-radius: 20px;
 }
-
-/* Asendatud avatava versiooniga
-.container {
-    background-image: linear-gradient(to right,rgba(33, 45, 114, 0.3),rgba(144, 152, 194, 0.1),rgba(33, 45, 114, 0.3));
-    border-radius: 5px;
-    margin-top: 5px;
-    padding-left: 25px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-}
-*/
 
 table {
     border: 1px solid;
@@ -124,10 +103,6 @@ p.h4 {
     display: grid;
     grid-template: auto auto auto / 75% auto;
     padding: 0 18px;
-    /*
-    background-color: rgba(255, 255, 255, 0);
-    background-image: linear-gradient(to right,rgba(33, 45, 114, 0.3),rgba(144, 152, 194, 0.1),rgba(33, 45, 114, 0.3));
-    */
     background-color: rgba(255, 255, 255, 0);
     background-image: linear-gradient(to right,rgba(68, 65, 77, 0.3),rgba(49, 23, 49, 0.1),rgba(68, 65, 77, 0.3));
     
@@ -179,7 +154,7 @@ p.h4 {
 }
 
 .sisuinfo span {
-    font-weight:400;
+    font-weight:500;
 }
 
 .StartNupp {
@@ -207,27 +182,8 @@ p.h4 {
     padding-bottom: 0.75em;
 }
 
-/*
-.StartNupp span {
-    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    transition: 0.8s;
-}
-*/
-
 .StartNupp:hover {
     background-image: linear-gradient(to right,rgba(116, 63, 144, 0.2),rgba(130, 86, 135, 0.1),rgba(116, 63, 144, 0.2));
     color:white
     
 }
-
-/*
-.StartNupp:hover span {
-    background: -webkit-linear-gradient(#fbfbfb, #c7c3d8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-*/
