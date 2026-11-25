@@ -34,7 +34,6 @@ body {
         linear-gradient(to right,rgba(6, 11, 41, 0.5),rgba(80, 93, 159, 0.1),rgba(6, 11, 41, 0.5)),
         linear-gradient(to right,rgba(252, 252, 252, 0.2),rgba(252, 252, 252, 0.2)),
         url("https://cdn.pixabay.com/photo/2026/02/21/05/24/05-24-35-983_1280.png");
-    /*background-color: rgba(154, 154, 154, 1);*/
     background-blend-mode: overlay;
     background-size:1750px;
     margin-left: auto;
@@ -80,10 +79,10 @@ p.h4 {
 }
 
 .containerMain audio {
-    padding-top: 2em;
+    padding-top: 1.5em;
 }
 
 .sektsioon {
-    display:grid;
-    grid-template: auto / auto auto;
+    display:flex;
+    column-gap: 5px;
 }

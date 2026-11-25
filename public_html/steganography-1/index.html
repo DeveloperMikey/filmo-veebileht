@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <title>Steganography 1</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
     <script src="../lipu-kontroll.js" defer></script>
 </head>
 <body>
 
     <div class="containerMain">
 
-    <div class="sektsioon">
+    <div>
     <p>Sisesta leitud lipp formaadis <code>lipp{...}</code>:</p>
 
-    <input type="text" id="kasutajaVastus" placeholder="lipp{...}">
-    <br><br>
+        <div class="sektsioon">
+        <input type="text" id="kasutajaVastus" placeholder="lipp{...}">
 
-    <div class="nupp">
-        <input type="button" value="Kontrolli" id="kontroll-nupp">
-    </div>
+        <div class="nupp">
+          <input type="button" value="Kontrolli" id="kontroll-nupp">
+        </div>
+        </div>
 
     <br>
     <span id="vastus"></span>
