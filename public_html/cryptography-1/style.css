@@ -97,3 +97,21 @@ input[type="text"] {
     padding: 8px 16px;
     cursor: pointer;
 }
+
+.item button[data-nimi="lipp"] {
+    background-color: #0c7633;
+    color: aliceblue;
+    border: none;
+    border-radius: 2px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.item button[data-nimi="sokolaad"] {
+    background-color: #0c7633;
+    color: aliceblue;
+    border: none;
+    border-radius: 2px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
