@@ -115,3 +115,7 @@ input[type="text"] {
     padding: 8px 16px;
     cursor: pointer;
 }
+
+a {
+    color:rgb(62, 136, 176)
+}
