@@ -1,3 +1,4 @@
+// Mihkel Mäemees
 const nupp = document.getElementById("kontroll-nupp");
 const sisend = document.getElementById("kasutajaVastus");
 const vastus = document.getElementById("vastus");

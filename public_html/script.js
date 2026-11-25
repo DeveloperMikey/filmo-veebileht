@@ -14,6 +14,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+// Mihkel Mäemees ja Joonas Pilt
 const ylesanded = [
   "cryptography-1",
   "cryptography-2",
@@ -44,4 +45,3 @@ ylesanded.forEach(async (yl) => {
     location.href = yl;
   });
 });
-
