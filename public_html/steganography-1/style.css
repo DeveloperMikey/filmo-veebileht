@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Rubik Doodle Shadow";
+  src: url(https://fonts.gstatic.com/s/rubikdoodleshadow/v1/rP2bp3im_k8G_wTVdvvMdHqmXTR3lEaL-KyT3Q.woff2);
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(https://fonts.gstatic.com/s/rubik/v31/iJWKBXyIfDnIV7nBrXw.woff2);
+}
+
+.Pealkiri {
+    font-size:20px;
+    font-family: "Rubik Doodle Shadow";
+    color: rgb(229, 229, 229);
+    padding-bottom: 25px;
+}
+
+h4 {
+    color: rgb(176, 186, 195);
+}
+
+body {
+    font-family: "Rubik";
+    background-image: 
+        url("Maja.png");
+    background-size: cover;
+}
+
+.containerMain {
+    display: grid;
+    grid-template: auto / auto auto;
+    padding: 10px;
+    background-image: 
+        linear-gradient(to right,rgba(6, 11, 41, 0.5),rgba(80, 93, 159, 0.1),rgba(6, 11, 41, 0.5)),
+        linear-gradient(to right,rgba(252, 252, 252, 0.2),rgba(252, 252, 252, 0.2)),
+        url("https://cdn.pixabay.com/photo/2026/02/21/05/24/05-24-35-983_1280.png");
+    /*background-color: rgba(154, 154, 154, 1);*/
+    background-blend-mode: overlay;
+    background-size:1750px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto; /*vh on "viewport height" %.*/
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(240, 248, 255, 0.097);
+    border-radius: 20px;
+}
+
+p {
+    color:white;
+}
+p.h4 {
+    color: rgb(176, 186, 195);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+}
+
+.sisuinfo {
+    width: 65%;
+    height: auto;
+    text-align: left;
+    font-weight: bold;
+    background-image: linear-gradient(to right,rgba(28, 19, 47, 0.2),rgba(47, 36, 70, 0.1),rgba(28, 19, 47, 0.2));
+    border: solid;
+    border-width: 3px;
+    border-color: rgba(40, 33, 114, 0.4);
+    border-radius: 3px;
+    padding-left: 25px;
+    padding-top: 0.33em;
+    padding-bottom: 0.33em;
+    margin-top: 8px;
+    margin-bottom: auto;
+}
+
+.sisuinfo span {
+    font-weight:400;
+}
+
+.containerMain audio {
+    padding-top: 2em;
+}
+
+.sektsioon {
+    display:grid;
+    grid-template: auto / auto auto;
+}
