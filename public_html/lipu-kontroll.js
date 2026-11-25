@@ -10,6 +10,7 @@ nupp.addEventListener("click", async () => {
     ylesanne: ylesanne,
     lipp: sisend.value,
     aeg: aeg,
+    juba_lahendatud: localStorage.getItem(`${ylesanne}-id`) !== null,
   });
   const r = await (
     await fetch("../cgi-bin/kontrolli-vastust.py?" + params)

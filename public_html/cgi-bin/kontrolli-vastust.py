@@ -23,6 +23,7 @@ else:
     ylesanne = params.get("ylesanne", ["web1"])[0]
     lipp = params.get("lipp", [""])[0]
     aeg = int(params.get("aeg", [0])[0]) # kui kaua ylesanne võttis (ms)
+    juba_lahendatud = bool(params.get("juba_lahendatud", [True])[0]) # kui kaua ylesanne võttis (ms)
 
     ANDMED = Path(__file__).resolve().parent.parent.parent / "andmed"
     
@@ -34,20 +35,25 @@ else:
     else:
         vastus = (ANDMED / "vastused" / f"{ylesanne}.txt").read_text(encoding="utf-8").strip()
         if vastus == lipp:
-            db = sqlite3.connect(ANDMED / "db" / "tulemused.sqlite3")
-            db.execute("""CREATE TABLE IF NOT EXISTS tulemused (
-                id INTEGER PRIMARY KEY,
-                ylesanne TEXT NOT NULL,
-                aeg REAL NOT NULL
-            )""")
+            if juba_lahendatud:
+                print(json.dumps({
+                    "ok": True,
+                }))
+            else:
+                db = sqlite3.connect(ANDMED / "db" / "tulemused.sqlite3")
+                db.execute("""CREATE TABLE IF NOT EXISTS tulemused (
+                    id INTEGER PRIMARY KEY,
+                    ylesanne TEXT NOT NULL,
+                    aeg REAL NOT NULL
+                )""")
 
-            entry = db.execute("INSERT INTO tulemused (ylesanne, aeg) VALUES (?, ?)", (ylesanne, aeg))
-            db.commit()
-            id = entry.lastrowid
-            print(json.dumps({
-                "ok": True,
-                "id": id
-            }))
-            db.close()
+                entry = db.execute("INSERT INTO tulemused (ylesanne, aeg) VALUES (?, ?)", (ylesanne, aeg))
+                db.commit()
+                id = entry.lastrowid
+                print(json.dumps({
+                    "ok": True,
+                    "id": id
+                }))
+                db.close()
         else:
             print("{\"ok\": false}")
