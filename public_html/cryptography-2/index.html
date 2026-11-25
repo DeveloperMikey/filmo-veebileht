@@ -40,33 +40,5 @@
     <span id="vastus"></span>
 
 </div>
-
-<!-- Javacript sama, mis krüptograafia1 lehel -->
-
-<script>
-async function lipuKontrollija() {
-    const input = document.getElementById('kasutajaVastus').value;
-    if(input.trim().length === 0) {
-        document.getElementById('vastus').innerHTML = 'Proovi ikka midagi sisestada ka.';
-        return;
-    }
-    const encodedBuffer = new TextEncoder().encode(input);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', encodedBuffer);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    const targetHash = "a981376eda915aa0bf6326022385afdfa49030d631b3bae149b553fb4776b4ed";
-    if(hashHex === targetHash)
-    {
-    document.getElementById('vastus').innerHTML= 'Tubli töö! Rohkem krüptograafia ülesandeid pole.';
-    }
-    else
-    {
-    document.getElementById('vastus').innerHTML= 'Vale vastus. Proovi uuesti.';
-
-    }
-
-}
-</script>
-
 </body>
 </html>
