@@ -123,7 +123,7 @@ web2.addEventListener("click", function() {
   if (localStorage.getItem("web2") === null) {
     localStorage.setItem("web2", Date.now())
   }
-  location.href = "web-exploitation-1"
+  location.href = "web-exploitation-2"
 
 });
 
