@@ -8,81 +8,77 @@
     src: url(https://fonts.gstatic.com/s/rubik/v31/iJWKBXyIfDnIV7nBrXw.woff2);
 }
 
-.Pealkiri {
-    font-size:20px;
-    font-family: "Rubik Doodle Shadow";
-    color: rgb(229, 229, 229);
-    padding-bottom: 25px;
-}
-
-h4 {
-    color: rgb(176, 186, 195);
-}
-
 body {
-    font-family: "Rubik";
-    background-image: 
-        url("Maja.png");
+    color: aliceblue;
+    font-family: "tahoma", sans-serif;
+    background-image: url("Maja.png");
     background-size: cover;
+    margin: 0;
 }
 
 .containerMain {
-    display: grid;
-    grid-template: auto / auto auto;
+    background-color: #18212e;
+    border-radius: 8px;
     padding: 10px;
-    background-image: 
-        linear-gradient(to right,rgba(6, 11, 41, 0.5),rgba(80, 93, 159, 0.1),rgba(6, 11, 41, 0.5)),
-        linear-gradient(to right,rgba(252, 252, 252, 0.2),rgba(252, 252, 252, 0.2)),
-        url("https://cdn.pixabay.com/photo/2026/02/21/05/24/05-24-35-983_1280.png");
-    background-blend-mode: overlay;
-    background-size:1750px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: auto; /*vh on "viewport height" %.*/
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgba(240, 248, 255, 0.097);
-    border-radius: 20px;
+    border: 1px solid #222930;
+    text-align: left;
+    max-width: 700px;
+    margin: 30px auto 0 auto;
+}
+
+.containerMain h1 {
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-align: center;
 }
 
 p {
-    color:white;
-}
-p.h4 {
-    color: rgb(176, 186, 195);
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 1.33em;
-    margin-bottom: 1.33em;
-}
-
-.sisuinfo {
-    width: 65%;
-    height: auto;
-    text-align: left;
-    font-weight: bold;
-    background-image: linear-gradient(to right,rgba(28, 19, 47, 0.2),rgba(47, 36, 70, 0.1),rgba(28, 19, 47, 0.2));
-    border: solid;
-    border-width: 3px;
-    border-color: rgba(40, 33, 114, 0.4);
-    border-radius: 3px;
-    padding-left: 25px;
-    padding-top: 0.33em;
-    padding-bottom: 0.33em;
-    margin-top: 8px;
-    margin-bottom: auto;
-}
-
-.sisuinfo span {
-    font-weight:400;
-}
-
-.containerMain audio {
-    padding-top: 1.5em;
+    color: aliceblue;
 }
 
 .sektsioon {
-    display:flex;
-    column-gap: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    font-family: monospace;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.vormirida {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+}
+
+.containerMain audio {
+    flex: 1;
+    max-width: 340px;
+    margin: 0;
+    height: 38px;
+    border-radius: 10px;
+    background-color: #263244;
+    color-scheme: dark;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    background-color: #ffffff;
+    border: 1px solid #222930;
+    padding: 5px;
+    color: rgb(22, 29, 36);
+}
+
+.nupp input[type="button"] {
+    background-color: #0c7633;
+    color: aliceblue;
+    border: none;
+    border-radius: 2px;
+    padding: 6px 12px;
+    cursor: pointer;
 }

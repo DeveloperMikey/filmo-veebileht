@@ -2,7 +2,7 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Steganography 1</title>
+    <title>Steganograafia I</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" href="../favicon.png">
     <script src="../lipu-kontroll.js" defer></script>
@@ -10,30 +10,28 @@
 <body>
 
     <div class="containerMain">
-
-    <div>
-    <p>Sisesta leitud lipp formaadis <code>lipp{...}</code>:</p>
+        <h1>Steganograafia I</h1>
+        <p>Steganograafia on võtete jada, mille eesmärk on peita informatsiooni failide, piltide, helifailide või muu sarnase sisse. Oma olemuselt sarnaneb see krüptograafiaga, kuid erinevus on see, et informatsiooni olemasolu pole ilmselge.</p>
+        <br>
+        <p>Proovi leida peidetud lipp ning sisesta leitud lipp formaadis <code>lipp{...}</code>:</p>
 
         <div class="sektsioon">
-        <input type="text" id="kasutajaVastus" placeholder="lipp{...}">
+            <div>
+                <div class="vormirida">
+                    <input type="text" id="kasutajaVastus" placeholder="lipp{...}">
+                    <div class="nupp">
+                        <input type="button" value="Kontrolli" id="kontroll-nupp">
+                    </div>
+                </div>
+                <span id="vastus"></span>
+            </div>
 
-        <div class="nupp">
-          <input type="button" value="Kontrolli" id="kontroll-nupp">
+            <audio controls>
+                <source src="Maja_muusika.mp3" type="audio/mpeg">
+            </audio>
         </div>
-        </div>
-
-    <br>
-    <span id="vastus"></span>
     </div>
 
-    <div>
-        <audio controls>
-            <source src="Maja_muusika.mp3", type="audio/mpeg"> 
-        </audio>
-    </div>
-
-    </div>
-    
     <div>
         <div>
             <img hidden src="" alt="hex diagonaal">
